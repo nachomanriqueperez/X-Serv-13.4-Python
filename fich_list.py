@@ -16,9 +16,11 @@ for user in num_usuarios:
     
     conf = user.split(":");
     username = conf[0]
-    shell = conf[-1]
+    shell = conf[-1][:-1]
     print "El usuario: *" + username + "* utiliza la shell: " + shell
+    dicc[username] = shell
+    #dicc[conf[0]]  = conf[-1][:-1]
 
-dicc [username,shell]
+print "root", dicc["root"]
 
 fich.close()
